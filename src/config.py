@@ -4,8 +4,8 @@ from kinde_sdk.kinde_api_client import GrantType
 
 load_dotenv()
 
-SITE_HOST = "localhost"
-SITE_PORT = "8000"
+SITE_HOST = os.getenv("SITE_HOST", "localhost")
+SITE_PORT = os.getenv("SITE_PORT", "8888")
 
 # Quickstart copy/paste overwrite section
 SITE_URL = f"http://{SITE_HOST}:{SITE_PORT}"
